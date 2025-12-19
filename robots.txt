@@ -1,0 +1,37 @@
+# robots.txt for DeployBar Website
+# https://waseemmaya.github.io/deploy-bar-updates/
+
+User-agent: *
+Allow: /
+
+# Disallow sensitive files
+Disallow: /private/
+Disallow: /*.dmg$
+
+# Sitemaps
+Sitemap: https://waseemmaya.github.io/deploy-bar-updates/sitemap.xml
+
+# Crawl-delay for good practices
+Crawl-delay: 10
+
+# Allow all popular search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: ia_archiver
+Allow: /

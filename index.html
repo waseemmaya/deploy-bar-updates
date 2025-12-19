@@ -1,0 +1,4205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary Meta Tags -->
+    <title>
+      DeployBar — Vercel & GitHub Actions in Your Menu Bar | macOS Menu Bar App
+    </title>
+    <meta
+      name="title"
+      content="DeployBar — Vercel & GitHub Actions in Your Menu Bar | macOS Menu Bar App"
+    />
+    <meta
+      name="description"
+      content="Monitor all your Vercel deployments and GitHub Actions workflows in real-time from your macOS menu bar. Get instant notifications, track build status, and stay focused without context switching. Free and open-source."
+    />
+    <meta
+      name="keywords"
+      content="DeployBar, Vercel, GitHub Actions, macOS menu bar, deployment monitoring, CI/CD, developer tools, Vercel deployments, GitHub workflows, menu bar app, macOS app, development tools, deployment tracker"
+    />
+    <meta name="author" content="Waseem Maya" />
+    <meta name="robots" content="index, follow" />
+    <link
+      rel="canonical"
+      href="https://waseemmaya.github.io/deploy-bar-updates/"
+    />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="logo.png" />
+    <link rel="apple-touch-icon" href="logo.png" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://waseemmaya.github.io/deploy-bar-updates/"
+    />
+    <meta
+      property="og:title"
+      content="DeployBar — Vercel & GitHub Actions in Your Menu Bar"
+    />
+    <meta
+      property="og:description"
+      content="Monitor all your Vercel deployments and GitHub Actions workflows in real-time from your macOS menu bar. Get instant notifications, track build status, and stay focused without context switching."
+    />
+    <meta
+      property="og:image"
+      content="https://waseemmaya.github.io/deploy-bar-updates/logo.png"
+    />
+    <meta property="og:site_name" content="DeployBar" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:url"
+      content="https://waseemmaya.github.io/deploy-bar-updates/"
+    />
+    <meta
+      name="twitter:title"
+      content="DeployBar — Vercel & GitHub Actions in Your Menu Bar"
+    />
+    <meta
+      name="twitter:description"
+      content="Monitor all your Vercel deployments and GitHub Actions workflows in real-time from your macOS menu bar. Free and open-source developer tool."
+    />
+    <meta
+      name="twitter:image"
+      content="https://waseemmaya.github.io/deploy-bar-updates/logo.png"
+    />
+    <meta name="twitter:creator" content="@waseemmaya" />
+
+    <!-- Additional SEO Meta Tags -->
+    <meta name="language" content="English" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="distribution" content="global" />
+    <meta name="rating" content="general" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "DeployBar",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "macOS",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "description": "Monitor all your Vercel deployments and GitHub Actions workflows in real-time from your macOS menu bar. Get instant notifications, track build status, and stay focused without context switching.",
+        "screenshot": "https://waseemmaya.github.io/deploy-bar-updates/logo.png",
+        "softwareVersion": "0.0.11",
+        "datePublished": "2024-01-01",
+        "author": {
+          "@type": "Person",
+          "name": "Waseem Maya",
+          "url": "https://github.com/waseemmaya"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "DeployBar",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://waseemmaya.github.io/deploy-bar-updates/logo.png"
+          }
+        },
+        "downloadUrl": "https://github.com/waseemmaya/deploy-bar-updates",
+        "releaseNotes": "Monitor Vercel deployments and GitHub Actions from your menu bar",
+        "featureList": [
+          "Real-time deployment monitoring",
+          "GitHub Actions workflow tracking",
+          "Native macOS notifications",
+          "Multiple account support",
+          "Secure token storage in system keychain",
+          "Auto-refresh every 30 seconds",
+          "Color-coded status indicators"
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5",
+          "ratingCount": "1"
+        }
+      }
+    </script>
+
+    <!-- FAQ Schema (JSON-LD) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is DeployBar?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "DeployBar is a free, open-source macOS menu bar app that lets you monitor your Vercel deployments and GitHub Actions workflows in real-time. Instead of constantly switching tabs to check deployment status, you get instant notifications and updates right from your menu bar."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is DeployBar free?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes! DeployBar is completely free and open-source. You can download it, use it, and even contribute to its development on GitHub."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which macOS versions are supported?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "DeployBar works on macOS 11 (Big Sur) and later. It supports both Apple Silicon (M1/M2/M3) and Intel-based Macs."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Are my tokens stored securely?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Absolutely! Your Vercel and GitHub tokens are stored in the macOS system keychain, not in plain text or localStorage. This is the same secure storage that Apple uses for passwords and sensitive data."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I monitor private repositories and deployments?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes! DeployBar works with both public and private repositories. As long as your GitHub token has the correct permissions, you can monitor all your private deployments and workflows."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Will I get notifications for failed deployments?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes! DeployBar sends native macOS notifications when deployments fail, so you can catch issues immediately before your users do."
+            }
+          }
+        ]
+      }
+    </script>
+
+    <script
+      defer
+      src="https://cloud.umami.is/script.js"
+      data-website-id="bedc06ec-1aee-42d3-9bc3-3c111dbb2859"
+    ></script>
+    <style>
+      :root {
+        --bg-primary: #0a0a0b;
+        --bg-secondary: #111113;
+        --bg-elevated: #18181b;
+        --bg-hover: #1f1f23;
+        --border: #27272a;
+        --text-primary: #fafafa;
+        --text-secondary: #a1a1aa;
+        --text-muted: #71717a;
+        --accent-teal: #2dd4bf;
+        --accent-orange: #f97316;
+        --accent-red: #ef4444;
+        --accent-blue: #3b82f6;
+        --gradient-teal: linear-gradient(135deg, #2dd4bf 0%, #14b8a6 100%);
+        --gradient-orange: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Outfit", -apple-system, BlinkMacSystemFont, sans-serif;
+        background: var(--bg-primary);
+        color: var(--text-primary);
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+
+      .mono {
+        font-family: "JetBrains Mono", monospace;
+      }
+
+      /* Noise texture overlay */
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+        opacity: 0.03;
+        pointer-events: none;
+        z-index: 1000;
+      }
+
+      /* Grid background */
+      .grid-bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(
+            rgba(255, 255, 255, 0.02) 1px,
+            transparent 1px
+          ),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+        background-size: 64px 64px;
+        pointer-events: none;
+      }
+
+      /* Gradient orbs */
+      .orb {
+        position: fixed;
+        border-radius: 50%;
+        filter: blur(120px);
+        opacity: 0.4;
+        pointer-events: none;
+      }
+
+      .orb-1 {
+        width: 600px;
+        height: 600px;
+        background: var(--accent-teal);
+        top: -200px;
+        right: -200px;
+        opacity: 0.15;
+      }
+
+      .orb-2 {
+        width: 400px;
+        height: 400px;
+        background: var(--accent-orange);
+        bottom: 20%;
+        left: -100px;
+        opacity: 0.1;
+      }
+
+      /* Navigation */
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        padding: 1rem 2rem;
+        backdrop-filter: blur(20px);
+        background: rgba(10, 10, 11, 0.8);
+        border-bottom: 1px solid var(--border);
+      }
+
+      .nav-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        text-decoration: none;
+        color: var(--text-primary);
+      }
+
+      .logo-icon {
+        width: 36px;
+        height: 36px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .logo-icon img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      .logo-text {
+        font-weight: 600;
+        font-size: 1.25rem;
+        letter-spacing: -0.02em;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+      }
+
+      .nav-links a {
+        color: var(--text-muted);
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: 500;
+        transition: color 0.2s;
+      }
+
+      .nav-links a:hover {
+        color: var(--text-secondary);
+      }
+
+      .nav-cta {
+        background: var(--text-primary);
+        color: var(--bg-primary);
+        padding: 0.6rem 1.25rem;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 0.9rem;
+        text-decoration: none;
+        transition: all 0.2s;
+      }
+
+      .nav-cta:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
+      }
+
+      /* Mobile Menu Button */
+      .mobile-menu-btn {
+        display: none;
+        background: transparent;
+        border: none;
+        color: var(--text-primary);
+        cursor: pointer;
+        padding: 0.5rem;
+        width: 40px;
+        height: 40px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 6px;
+        transition: background 0.2s;
+        z-index: 101;
+        position: relative;
+        -webkit-tap-highlight-color: transparent;
+        touch-action: manipulation;
+      }
+
+      .mobile-menu-btn:hover {
+        background: var(--bg-elevated);
+      }
+
+      .mobile-menu-btn svg {
+        width: 24px;
+        height: 24px;
+      }
+
+      /* Mobile Menu Overlay */
+      .mobile-menu-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 999;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        pointer-events: none;
+      }
+
+      .mobile-menu-overlay.active {
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      .mobile-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        max-width: 85vw;
+        height: 100vh;
+        background: var(--bg-secondary);
+        border-left: 1px solid var(--border);
+        z-index: 1000;
+        padding: 1.5rem;
+        overflow-y: auto;
+        transition: right 0.3s ease;
+        box-shadow: -4px 0 20px rgba(0, 0, 0, 0.3);
+        pointer-events: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .mobile-menu.active {
+        right: 0;
+      }
+
+      .mobile-menu-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .mobile-menu-close {
+        background: transparent;
+        border: none;
+        color: var(--text-primary);
+        cursor: pointer;
+        padding: 0.5rem;
+        width: 36px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 6px;
+        transition: background 0.2s;
+        -webkit-tap-highlight-color: transparent;
+        touch-action: manipulation;
+      }
+
+      .mobile-menu-close:hover {
+        background: var(--bg-elevated);
+      }
+
+      .mobile-menu-links {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .mobile-menu-links a {
+        display: block;
+        padding: 0.875rem 1rem;
+        color: var(--text-secondary);
+        text-decoration: none;
+        font-size: 0.95rem;
+        font-weight: 500;
+        border-radius: 8px;
+        transition: all 0.2s;
+        -webkit-tap-highlight-color: rgba(255, 255, 255, 0.1);
+        touch-action: manipulation;
+        cursor: pointer;
+      }
+
+      .mobile-menu-links a:hover {
+        background: var(--bg-elevated);
+        color: var(--text-primary);
+      }
+
+      .mobile-menu-links .nav-cta {
+        background: var(--text-primary);
+        color: var(--bg-primary);
+        margin-top: 0.5rem;
+        text-align: center;
+      }
+
+      .mobile-menu-links .nav-cta:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
+      }
+
+      /* Hero Section */
+      .hero {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 8rem 2rem 4rem;
+        position: relative;
+      }
+
+      .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem 1rem;
+        background: var(--bg-elevated);
+        border: 1px solid var(--border);
+        border-radius: 100px;
+        font-size: 0.85rem;
+        color: var(--text-secondary);
+        margin-bottom: 2rem;
+      }
+
+      .hero-badge-dot {
+        width: 8px;
+        height: 8px;
+        background: var(--accent-teal);
+        border-radius: 50%;
+        animation: pulse 2s infinite;
+      }
+
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+        50% {
+          opacity: 0.5;
+          transform: scale(0.9);
+        }
+      }
+
+      .hero h1 {
+        font-size: clamp(3rem, 8vw, 5.5rem);
+        font-weight: 700;
+        letter-spacing: -0.04em;
+        line-height: 1.1;
+        margin-bottom: 1.5rem;
+        max-width: 900px;
+      }
+
+      .hero h1 .highlight {
+        background: var(--gradient-teal);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .hero-subtitle {
+        font-size: 1.25rem;
+        color: var(--text-secondary);
+        max-width: 600px;
+        margin-bottom: 3rem;
+        line-height: 1.7;
+      }
+
+      .hero-cta-group {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .btn-primary {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 1rem 2rem;
+        background: var(--gradient-teal);
+        color: var(--bg-primary);
+        border-radius: 12px;
+        font-weight: 600;
+        font-size: 1rem;
+        text-decoration: none;
+        transition: all 0.3s;
+        border: none;
+        cursor: pointer;
+      }
+
+      .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 30px rgba(45, 212, 191, 0.3);
+      }
+
+      .btn-secondary {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 1rem 2rem;
+        background: var(--bg-elevated);
+        color: var(--text-primary);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        font-weight: 600;
+        font-size: 1rem;
+        text-decoration: none;
+        transition: all 0.3s;
+      }
+
+      .btn-secondary:hover {
+        background: var(--bg-hover);
+        border-color: var(--text-muted);
+      }
+
+      /* Menu Bar Preview */
+      .menubar-preview {
+        margin-top: 5rem;
+        position: relative;
+      }
+
+      .menubar-mockup {
+        background: #1a1a1a;
+        border-radius: 16px;
+        border: 1px solid #2a2a2a;
+        overflow: hidden;
+        box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05),
+          0 25px 60px rgba(0, 0, 0, 0.6), 0 0 120px rgba(45, 212, 191, 0.08);
+        max-width: 520px;
+        margin: 0 auto;
+      }
+
+      .menubar-header {
+        display: flex;
+        align-items: center;
+        padding: 0.6rem 0.75rem;
+        background: #111113;
+        border-bottom: 1px solid #2a2a2a;
+        gap: 0.5rem;
+      }
+
+      .menubar-tabs {
+        display: flex;
+        align-items: center;
+        background: #1f1f1f;
+        border-radius: 6px;
+        padding: 2px;
+      }
+
+      .menubar-tab {
+        padding: 0.35rem 0.75rem;
+        font-size: 0.7rem;
+        font-weight: 500;
+        color: var(--text-muted);
+        background: transparent;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+
+      .menubar-tab.active {
+        background: #3a3a3a;
+        color: white;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+      }
+
+      .menubar-separator {
+        width: 1px;
+        height: 16px;
+        background: #2a2a2a;
+        margin: 0 0.25rem;
+      }
+
+      .menubar-account {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        padding: 0.3rem 0.6rem;
+        background: #1f1f1f;
+        border-radius: 6px;
+        font-size: 0.75rem;
+        color: var(--text-secondary);
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+
+      .menubar-account:hover {
+        background: #2a2a2a;
+      }
+
+      .menubar-avatar {
+        width: 18px;
+        height: 18px;
+        border-radius: 4px;
+        object-fit: cover;
+      }
+
+      .menubar-actions {
+        margin-left: auto;
+        display: flex;
+        gap: 2px;
+      }
+
+      .menubar-action {
+        width: 26px;
+        height: 26px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--text-muted);
+        background: transparent;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+
+      .menubar-action:hover {
+        color: white;
+        background: #1f1f1f;
+      }
+
+      .menubar-action.pinned {
+        color: var(--accent-teal);
+        background: rgba(45, 212, 191, 0.1);
+      }
+
+      /* List Styles */
+      .menubar-list {
+        /* max-height: 480px; */
+        overflow: hidden;
+      }
+
+      .list-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.65rem;
+        padding: 0.65rem 0.75rem;
+        border-bottom: 1px solid #262626;
+        transition: background 0.15s;
+        cursor: pointer;
+      }
+
+      .list-item:hover {
+        background: #161616;
+      }
+
+      .list-item:last-child {
+        border-bottom: none;
+      }
+
+      /* Status Dots */
+      .status-dot {
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        margin-top: 5px;
+        flex-shrink: 0;
+        position: relative;
+      }
+
+      .status-dot.success {
+        background: var(--accent-teal);
+      }
+
+      .status-dot.building {
+        background: var(--accent-orange);
+      }
+
+      .status-dot.building .ping {
+        position: absolute;
+        inset: 0;
+        background: var(--accent-orange);
+        border-radius: 50%;
+        animation: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+      }
+
+      @keyframes ping {
+        75%,
+        100% {
+          transform: scale(2);
+          opacity: 0;
+        }
+      }
+
+      .status-dot.error {
+        background: var(--accent-red);
+      }
+
+      .status-dot.queued {
+        background: #eab308;
+      }
+
+      .status-dot.canceled {
+        background: var(--text-muted);
+      }
+
+      /* Item Content */
+      .item-content {
+        flex: 1;
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.35rem;
+      }
+
+      .item-header {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+      }
+
+      .item-project {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        padding: 0.2rem 0.5rem;
+        background: #1f1f1f;
+        border-radius: 4px;
+        font-size: 0.7rem;
+        font-weight: 500;
+        color: #d4d4d8;
+      }
+
+      .item-project svg {
+        color: var(--text-muted);
+      }
+
+      .item-link,
+      .item-rerun {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 20px;
+        height: 20px;
+        background: #1f1f1f;
+        border: none;
+        border-radius: 4px;
+        color: var(--text-muted);
+        cursor: pointer;
+        transition: all 0.15s;
+      }
+
+      .item-link:hover,
+      .item-rerun:hover {
+        color: var(--accent-teal);
+      }
+
+      .item-time {
+        font-size: 0.65rem;
+        color: var(--text-muted);
+        margin-left: auto;
+        font-variant-numeric: tabular-nums;
+        display: flex;
+        align-items: center;
+      }
+
+      .item-commit {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        font-size: 0.75rem;
+        color: var(--text-secondary);
+      }
+
+      .item-commit svg {
+        color: #525252;
+        flex-shrink: 0;
+      }
+
+      .item-commit span {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      /* Meta Tags */
+      .item-meta {
+        display: flex;
+        align-items: center;
+        gap: 0.35rem;
+        flex-wrap: wrap;
+      }
+
+      .meta-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.25rem;
+        padding: 0.15rem 0.4rem;
+        background: #1a1a1a;
+        border-radius: 3px;
+        font-size: 0.6rem;
+        color: var(--text-muted);
+      }
+
+      .meta-tag.workflow {
+        color: #a1a1aa;
+      }
+
+      .meta-tag.event {
+        color: var(--text-muted);
+      }
+
+      .meta-tag.event.pr {
+        color: #a78bfa;
+      }
+
+      .meta-tag.production {
+        background: rgba(45, 212, 191, 0.1);
+        color: var(--accent-teal);
+      }
+
+      .spinner {
+        animation: spin 1s linear infinite;
+      }
+
+      /* Features Section */
+      .features {
+        padding: 8rem 2rem;
+        position: relative;
+      }
+
+      .section-header {
+        text-align: center;
+        margin-bottom: 4rem;
+      }
+
+      .section-label {
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: var(--accent-teal);
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin-bottom: 1rem;
+      }
+
+      .section-title {
+        font-size: clamp(2rem, 5vw, 3rem);
+        font-weight: 700;
+        letter-spacing: -0.03em;
+        margin-bottom: 1rem;
+      }
+
+      .section-desc {
+        color: var(--text-secondary);
+        max-width: 600px;
+        margin: 0 auto;
+        font-size: 1.1rem;
+      }
+
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 1.5rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .feature-card {
+        background: var(--bg-secondary);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 2rem;
+        transition: all 0.3s;
+      }
+
+      .feature-card:hover {
+        border-color: var(--text-muted);
+        transform: translateY(-4px);
+      }
+
+      .feature-icon {
+        width: 48px;
+        height: 48px;
+        background: var(--bg-elevated);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1.25rem;
+        font-size: 1.5rem;
+      }
+
+      .feature-card h3 {
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: 0.75rem;
+        letter-spacing: -0.01em;
+      }
+
+      .feature-card p {
+        color: var(--text-secondary);
+        font-size: 0.95rem;
+        line-height: 1.6;
+      }
+
+      /* Status Colors Section */
+      .status-section {
+        padding: 6rem 2rem;
+        background: var(--bg-secondary);
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+      }
+
+      .status-grid {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .status-item {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 1rem 1.5rem;
+        background: var(--bg-primary);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+      }
+
+      .status-indicator {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+      }
+
+      .status-label {
+        font-weight: 500;
+        font-size: 0.95rem;
+      }
+
+      /* How It Works */
+      .how-it-works {
+        padding: 8rem 2rem;
+        position: relative;
+      }
+
+      .steps-container {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .step {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 2rem;
+        margin-bottom: 3rem;
+        align-items: start;
+      }
+
+      .step-number {
+        width: 48px;
+        height: 48px;
+        background: var(--bg-elevated);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 1.1rem;
+        color: var(--accent-teal);
+      }
+
+      .step-content h3 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+      }
+
+      .step-content p {
+        color: var(--text-secondary);
+        line-height: 1.7;
+      }
+
+      .step-code {
+        margin-top: 1rem;
+        padding: 1rem 1.25rem;
+        background: var(--bg-secondary);
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        font-size: 0.85rem;
+        color: var(--text-secondary);
+        overflow-x: auto;
+      }
+
+      .step-code .cmd {
+        color: var(--accent-teal);
+      }
+
+      /* CTA Section */
+      .cta-section {
+        padding: 8rem 2rem;
+        text-align: center;
+        position: relative;
+      }
+
+      .cta-section::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 600px;
+        height: 600px;
+        background: var(--accent-teal);
+        filter: blur(200px);
+        opacity: 0.1;
+        pointer-events: none;
+      }
+
+      @media (max-width: 768px) {
+        .cta-section::before {
+          width: 300px;
+          height: 300px;
+          filter: blur(100px);
+        }
+      }
+
+      .cta-title {
+        font-size: clamp(2rem, 5vw, 3.5rem);
+        font-weight: 700;
+        letter-spacing: -0.03em;
+        margin-bottom: 1.5rem;
+      }
+
+      .cta-desc {
+        color: var(--text-secondary);
+        font-size: 1.1rem;
+        max-width: 500px;
+        margin: 0 auto 2.5rem;
+      }
+
+      .download-buttons {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 1.5rem;
+      }
+
+      .download-note {
+        color: var(--text-muted);
+        font-size: 0.9rem;
+      }
+
+      .download-note a {
+        color: var(--text-secondary);
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+
+      .download-note a:hover {
+        color: var(--accent-teal);
+      }
+
+      /* Footer */
+      footer {
+        padding: 3rem 2rem;
+        border-top: 1px solid var(--border);
+      }
+
+      .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
+      .footer-left {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      .footer-logo {
+        width: 28px;
+        height: 28px;
+        border-radius: 8px;
+      }
+
+      .footer-logo img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      .footer-text {
+        color: var(--text-muted);
+        font-size: 0.9rem;
+      }
+
+      .footer-links {
+        display: flex;
+        gap: 2rem;
+      }
+
+      .footer-links a {
+        color: var(--text-muted);
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: color 0.2s;
+      }
+
+      .footer-links a:hover {
+        color: var(--text-primary);
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        nav {
+          padding: 1rem;
+        }
+
+        .nav-links {
+          display: none;
+        }
+
+        .mobile-menu-btn {
+          display: flex;
+        }
+
+        .mobile-menu-overlay {
+          display: block;
+        }
+
+        .mobile-menu {
+          display: block;
+        }
+
+        .logo-text {
+          font-size: 1.1rem;
+        }
+
+        .logo-icon {
+          width: 32px;
+          height: 32px;
+        }
+
+        .hero {
+          padding: 7rem 0.7rem 3rem;
+        }
+
+        .hero-subtitle {
+          font-size: 1.1rem;
+        }
+
+        .hero-cta-group {
+          flex-direction: column;
+          width: 100%;
+          max-width: 300px;
+        }
+
+        .btn-primary,
+        .btn-secondary {
+          justify-content: center;
+          width: 100%;
+        }
+
+        .menubar-preview {
+          margin-top: 3rem;
+          padding: 0 0.5rem;
+        }
+
+        .menubar-mockup {
+          max-width: 100%;
+        }
+
+        .menubar-header {
+          flex-wrap: wrap;
+          gap: 0.2rem;
+        }
+
+        .menubar-tabs {
+          order: 1;
+        }
+
+        .menubar-separator {
+          display: none;
+        }
+
+        .menubar-account {
+          order: 2;
+        }
+
+        .menubar-actions {
+          order: 3;
+        }
+
+        .item-project span {
+          max-width: 100px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+
+        .item-commit span {
+          max-width: 180px;
+        }
+
+        .meta-tag {
+          font-size: 0.55rem;
+          padding: 0.1rem 0.3rem;
+        }
+
+        .features,
+        .how-it-works,
+        .cta-section {
+          padding: 5rem 1.5rem;
+        }
+
+        .cta-title {
+          font-size: clamp(1.75rem, 6vw, 2.5rem);
+          margin-bottom: 1rem;
+        }
+
+        .cta-desc {
+          font-size: 1rem;
+          margin-bottom: 2rem;
+          padding: 0 0.5rem;
+        }
+
+        .download-buttons {
+          flex-direction: column;
+          gap: 0.75rem;
+          width: 100%;
+          max-width: 100%;
+        }
+
+        .download-buttons .btn-primary,
+        .download-buttons .btn-secondary {
+          width: 100%;
+          padding: 0.875rem 1.5rem;
+          font-size: 0.95rem;
+          white-space: normal;
+          word-wrap: break-word;
+          text-align: center;
+        }
+
+        .download-buttons .btn-primary svg,
+        .download-buttons .btn-secondary svg {
+          flex-shrink: 0;
+        }
+
+        .download-note {
+          font-size: 0.85rem;
+          padding: 0 1rem;
+          line-height: 1.6;
+        }
+
+        .download-note a {
+          display: inline-block;
+          word-break: break-word;
+        }
+
+        .step {
+          grid-template-columns: 1fr;
+          gap: 1rem;
+        }
+
+        .step-number {
+          width: 40px;
+          height: 40px;
+        }
+
+        .footer-content {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .footer-links {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+      }
+
+      /* Keyboard shortcut styling */
+      kbd {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.2rem 0.5rem;
+        background: var(--bg-elevated);
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        font-size: 0.75rem;
+        font-family: "JetBrains Mono", monospace;
+        color: var(--text-secondary);
+        box-shadow: 0 2px 0 var(--border);
+      }
+
+      /* Scroll indicator */
+      .scroll-indicator {
+        position: absolute;
+        bottom: 2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--text-muted);
+        font-size: 0.8rem;
+        animation: bounce 2s infinite;
+      }
+
+      @keyframes bounce {
+        0%,
+        100% {
+          transform: translateX(-50%) translateY(0);
+        }
+        50% {
+          transform: translateX(-50%) translateY(8px);
+        }
+      }
+
+      .scroll-indicator svg {
+        width: 20px;
+        height: 20px;
+      }
+
+      /* Tech stack badges */
+      .tech-stack {
+        display: flex;
+        gap: 0.75rem;
+        justify-content: center;
+        margin-top: 3rem;
+        flex-wrap: wrap;
+      }
+
+      .tech-badge {
+        padding: 0.4rem 0.8rem;
+        background: var(--bg-secondary);
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        font-size: 0.75rem;
+        color: var(--text-muted);
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+      }
+
+      .tech-badge svg {
+        width: 14px;
+        height: 14px;
+      }
+
+      /* FAQ Section */
+      .faq-section {
+        padding: 8rem 2rem;
+        position: relative;
+      }
+
+      .faq-container {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .faq-item {
+        background: var(--bg-secondary);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        margin-bottom: 1rem;
+        transition: all 0.3s;
+      }
+
+      .faq-item:hover {
+        border-color: var(--text-muted);
+      }
+
+      .faq-item[open] {
+        border-color: var(--accent-teal);
+      }
+
+      .faq-question {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.25rem 1.5rem;
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 1.05rem;
+        color: var(--text-primary);
+        list-style: none;
+        user-select: none;
+      }
+
+      .faq-question::-webkit-details-marker {
+        display: none;
+      }
+
+      .faq-question:hover {
+        color: var(--accent-teal);
+      }
+
+      .faq-icon {
+        flex-shrink: 0;
+        transition: transform 0.3s;
+        color: var(--text-muted);
+      }
+
+      .faq-item[open] .faq-icon {
+        transform: rotate(180deg);
+        color: var(--accent-teal);
+      }
+
+      .faq-answer {
+        padding: 0 1.5rem 1.5rem 1.5rem;
+        color: var(--text-secondary);
+        line-height: 1.7;
+      }
+
+      .faq-answer p {
+        margin-bottom: 0.75rem;
+      }
+
+      .faq-answer p:last-child {
+        margin-bottom: 0;
+      }
+
+      .faq-answer ol {
+        margin-left: 1.5rem;
+        margin-top: 0.5rem;
+      }
+
+      .faq-answer ol li {
+        margin-bottom: 0.5rem;
+      }
+
+      .faq-answer a {
+        color: var(--accent-teal);
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+
+      .faq-answer a:hover {
+        color: var(--text-primary);
+      }
+
+      .faq-code {
+        margin-top: 1rem;
+        padding: 1rem 1.25rem;
+        background: var(--bg-primary);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        font-size: 0.85rem;
+        color: var(--text-secondary);
+        overflow-x: auto;
+      }
+
+      .faq-code .cmd {
+        color: var(--accent-teal);
+      }
+
+      /* FAQ Responsive */
+      @media (max-width: 768px) {
+        .faq-section {
+          padding: 5rem 1.5rem;
+        }
+
+        .faq-question {
+          padding: 1rem;
+          font-size: 0.95rem;
+        }
+
+        .faq-answer {
+          padding: 0 1rem 1rem 1rem;
+          font-size: 0.9rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-bg" aria-hidden="true"></div>
+    <div class="orb orb-1" aria-hidden="true"></div>
+    <div class="orb orb-2" aria-hidden="true"></div>
+
+    <!-- Navigation -->
+    <nav role="navigation" aria-label="Main navigation">
+      <div class="nav-container">
+        <a href="#" class="logo">
+          <div class="logo-icon">
+            <img src="logo.png" alt="DeployBar Logo" />
+          </div>
+          <span class="logo-text">DeployBar</span>
+        </a>
+        <div class="nav-links">
+          <a href="#features">Features</a>
+          <a href="#how-it-works">Setup</a>
+          <a href="https://github.com/waseemmaya/deploy-bar" target="_blank"
+            >GitHub</a
+          >
+          <a href="#download" class="nav-cta">Download</a>
+        </div>
+        <button
+          class="mobile-menu-btn"
+          id="mobile-menu-btn"
+          aria-label="Open menu"
+          onclick="openMobileMenu()"
+          type="button"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+      <div class="mobile-menu-header">
+        <div class="logo">
+          <div class="logo-icon">
+            <img src="logo.png" alt="DeployBar Logo" />
+          </div>
+          <span class="logo-text">DeployBar</span>
+        </div>
+        <button
+          class="mobile-menu-close"
+          id="mobile-menu-close"
+          aria-label="Close menu"
+          onclick="closeMobileMenu()"
+          type="button"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+        </button>
+      </div>
+      <div class="mobile-menu-links">
+        <a href="#features" onclick="closeMobileMenu()">Features</a>
+        <a href="#how-it-works" onclick="closeMobileMenu()">Setup</a>
+        <a
+          href="https://github.com/waseemmaya/deploy-bar"
+          target="_blank"
+          onclick="closeMobileMenu()"
+          >GitHub</a
+        >
+        <a href="#download" class="nav-cta" onclick="closeMobileMenu()"
+          >Download</a
+        >
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" role="banner" aria-label="Hero section">
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        <span class="mono" id="app-version">v0.0.11</span>
+        <span>— macOS Menu Bar App</span>
+      </div>
+
+      <h1>
+        Vercel & GitHub Actions<br />
+        in your <span class="highlight">menu bar</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        Monitor all your Vercel deployments and GitHub Actions workflows in
+        real-time without leaving your workflow. Status updates, notifications,
+        and quick access — always one click away.
+      </p>
+
+      <div class="hero-cta-group">
+        <a
+          href="#download"
+          class="btn-primary"
+          aria-label="Download DeployBar for macOS"
+        >
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+            <polyline points="7 10 12 15 17 10" />
+            <line x1="12" y1="15" x2="12" y2="3" />
+          </svg>
+          Download for macOS
+        </a>
+        <a
+          href="https://github.com/waseemmaya/deploy-bar"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-secondary"
+          aria-label="View DeployBar on GitHub"
+        >
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+            />
+          </svg>
+          View on GitHub
+        </a>
+      </div>
+
+      <div class="tech-stack">
+        <span class="tech-badge">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M24 22.525H0l12-21.05 12 21.05z" />
+          </svg>
+          Vercel
+        </span>
+        <span class="tech-badge">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+            />
+          </svg>
+          GitHub Actions
+        </span>
+        <span class="tech-badge">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M14.23 12.004a2.236 2.236 0 0 1-2.235 2.236 2.236 2.236 0 0 1-2.236-2.236 2.236 2.236 0 0 1 2.235-2.236 2.236 2.236 0 0 1 2.236 2.236zm2.648-10.69c-1.346 0-3.107.96-4.888 2.622-1.78-1.653-3.542-2.602-4.887-2.602-.41 0-.783.093-1.106.278-1.375.793-1.683 3.264-.973 6.365C1.98 8.917 0 10.42 0 12.004c0 1.59 1.99 3.097 5.043 4.03-.704 3.113-.39 5.588.988 6.38.32.187.69.275 1.102.275 1.345 0 3.107-.96 4.888-2.624 1.78 1.654 3.542 2.603 4.887 2.603.41 0 .783-.09 1.106-.275 1.374-.792 1.683-3.263.973-6.365C22.02 15.096 24 13.59 24 12.004c0-1.59-1.99-3.097-5.043-4.032.704-3.11.39-5.587-.988-6.38-.318-.184-.688-.277-1.092-.278zm-.005 1.09v.006c.225 0 .406.044.558.127.666.382.955 1.835.73 3.704-.054.46-.142.945-.25 1.44-.96-.236-2.006-.417-3.107-.534-.66-.905-1.345-1.727-2.035-2.447 1.592-1.48 3.087-2.292 4.105-2.295zm-9.77.02c1.012 0 2.514.808 4.11 2.28-.686.72-1.37 1.537-2.02 2.442-1.107.117-2.154.298-3.113.538-.112-.49-.195-.964-.254-1.42-.23-1.868.054-3.32.714-3.707.19-.09.4-.127.563-.132zm4.882 3.05c.455.468.91.992 1.36 1.564-.44-.02-.89-.034-1.345-.034-.46 0-.915.01-1.36.034.44-.572.895-1.096 1.345-1.565zM12 8.1c.74 0 1.477.034 2.202.093.406.582.802 1.203 1.183 1.86.372.64.71 1.29 1.018 1.946-.308.655-.646 1.31-1.013 1.95-.38.66-.773 1.288-1.18 1.87-.728.063-1.466.098-2.21.098-.74 0-1.477-.035-2.202-.093-.406-.582-.802-1.204-1.183-1.86-.372-.64-.71-1.29-1.018-1.946.303-.657.646-1.313 1.013-1.954.38-.66.773-1.286 1.18-1.868.728-.064 1.466-.098 2.21-.098zm-3.635.254c-.24.377-.48.763-.704 1.16-.225.39-.435.782-.635 1.174-.265-.656-.49-1.31-.676-1.947.64-.15 1.315-.283 2.015-.386zm7.26 0c.695.103 1.365.23 2.006.387-.18.632-.405 1.282-.66 1.933-.2-.39-.41-.783-.64-1.174-.225-.392-.465-.774-.705-1.146zm3.063.675c.484.15.944.317 1.375.498 1.732.74 2.852 1.708 2.852 2.476-.005.768-1.125 1.74-2.857 2.475-.42.18-.88.342-1.355.493-.28-.958-.646-1.956-1.1-2.98.45-1.017.81-2.01 1.085-2.964zm-13.395.004c.278.96.645 1.957 1.1 2.98-.45 1.017-.812 2.01-1.086 2.964-.484-.15-.944-.318-1.37-.5-1.732-.737-2.852-1.706-2.852-2.474 0-.768 1.12-1.742 2.852-2.476.42-.18.88-.342 1.356-.494zm11.678 4.28c.265.657.49 1.312.676 1.948-.64.157-1.316.29-2.016.39.24-.375.48-.762.705-1.158.225-.39.435-.788.636-1.18zm-9.945.02c.2.392.41.783.64 1.175.23.39.465.772.705 1.143-.695-.102-1.365-.23-2.006-.386.18-.63.406-1.282.66-1.933zM17.92 16.32c.112.493.2.968.254 1.423.23 1.868-.054 3.32-.714 3.708-.147.09-.338.128-.563.128-1.012 0-2.514-.807-4.11-2.28.686-.72 1.37-1.536 2.02-2.44 1.107-.118 2.154-.3 3.113-.54zm-11.83.01c.96.234 2.006.415 3.107.532.66.905 1.345 1.727 2.035 2.446-1.595 1.483-3.092 2.295-4.11 2.295-.22-.005-.406-.05-.553-.132-.666-.38-.955-1.834-.73-3.703.054-.46.142-.944.25-1.438zm4.56.64c.44.02.89.034 1.345.034.46 0 .915-.01 1.36-.034-.44.572-.895 1.095-1.345 1.565-.455-.47-.91-.993-1.36-1.565z"
+            />
+          </svg>
+          React
+        </span>
+        <span class="tech-badge">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M1.125 0C.502 0 0 .502 0 1.125v21.75C0 23.498.502 24 1.125 24h21.75c.623 0 1.125-.502 1.125-1.125V1.125C24 .502 23.498 0 22.875 0zm17.363 9.75c.612 0 1.154.037 1.627.111a6.38 6.38 0 0 1 1.306.34v2.458a3.95 3.95 0 0 0-.643-.361 5.093 5.093 0 0 0-.717-.26 5.453 5.453 0 0 0-1.426-.2c-.3 0-.573.028-.819.086a2.1 2.1 0 0 0-.623.242c-.17.104-.3.229-.393.374a.888.888 0 0 0-.14.49c0 .196.053.373.156.529.104.156.252.304.443.444s.423.276.696.395c.272.12.576.237.912.352.475.164.925.347 1.348.549.424.202.792.44 1.104.713.313.274.562.59.748.949.187.359.28.778.28 1.259 0 .616-.111 1.127-.329 1.534-.218.407-.506.733-.866.978a3.75 3.75 0 0 1-1.229.538 5.885 5.885 0 0 1-1.413.166c-.682 0-1.326-.063-1.934-.188a4.76 4.76 0 0 1-1.567-.568v-2.631a4.83 4.83 0 0 0 .861.56c.304.158.617.287.935.383.32.098.64.17.96.221.322.05.62.076.894.076.33 0 .597-.025.8-.074a1.57 1.57 0 0 0 .507-.21.77.77 0 0 0 .273-.314.87.87 0 0 0 .082-.383c0-.22-.062-.41-.186-.578a1.75 1.75 0 0 0-.51-.439 4.4 4.4 0 0 0-.762-.363 20.728 20.728 0 0 0-.943-.339c-.44-.152-.86-.328-1.26-.528a4.65 4.65 0 0 1-1.048-.718 3.2 3.2 0 0 1-.71-.974c-.175-.376-.263-.811-.263-1.306 0-.586.102-1.087.304-1.503a3.07 3.07 0 0 1 .828-1.062 3.6 3.6 0 0 1 1.219-.638 5.37 5.37 0 0 1 1.481-.203zM4.363 9.75h3.195l2.402 6.57h.035l2.402-6.57h3.096v8.924h-2.074v-5.906h-.037l-2.18 5.906H9.283l-2.17-5.904h-.037v5.904H4.363z"
+            />
+          </svg>
+          TypeScript
+        </span>
+        <span class="tech-badge">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 C13.666,10.618,15.027,12,18.001,12c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C16.337,6.182,14.976,4.8,12.001,4.8z M6.001,12c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 c1.177,1.194,2.538,2.576,5.512,2.576c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C10.337,13.382,8.976,12,6.001,12z"
+            />
+          </svg>
+          Tailwind
+        </span>
+        <span class="tech-badge">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M19.137.002l-4.137.002c-.266 0-.479.22-.479.486v11.42c0 1.24-.006 2.13-.034 2.747-.027.617-.084 1.14-.177 1.565-.093.424-.222.748-.387.97-.165.222-.368.415-.608.579-.241.164-.558.313-.952.449-.394.136-.866.26-1.416.372-.549.113-1.193.207-1.932.282-.738.075-1.54.112-2.407.112-.865 0-1.669-.037-2.41-.112-.741-.075-1.387-.169-1.937-.282-.549-.113-1.021-.237-1.415-.372-.393-.136-.71-.285-.95-.449-.24-.164-.444-.357-.609-.579-.165-.222-.294-.546-.387-.97-.093-.425-.15-.948-.177-1.565-.028-.617-.034-1.507-.034-2.747V.488c0-.266-.213-.486-.479-.486H.479C.213.002 0 .222 0 .488v23.024c0 .266.213.486.479.486h4.137c.266 0 .479-.22.479-.486V12.09c0-1.24.006-2.13.034-2.747.027-.617.084-1.14.177-1.565.093-.424.222-.748.387-.97.165-.222.368-.415.609-.579.24-.164.557-.313.95-.449.394-.136.866-.26 1.415-.372.549-.113 1.196-.207 1.937-.282.742-.075 1.545-.112 2.41-.112.867 0 1.669.037 2.407.112.738.075 1.383.169 1.932.282.549.113 1.022.236 1.416.372.394.136.711.285.952.449.24.164.443.357.608.579.165.222.294.546.387.97.093.425.15.948.177 1.565.028.617.034 1.507.034 2.747v11.422c0 .266.213.486.479.486h4.137c.266 0 .479-.22.479-.486V.488c0-.266-.213-.486-.479-.486z"
+            />
+          </svg>
+          Tauri
+        </span>
+        <span class="tech-badge">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M23.687 11.709l-.995-.616a13.559 13.559 0 0 0-.028-.29l.855-.797a.344.344 0 0 0-.114-.571l-1.093-.409a8.392 8.392 0 0 0-.086-.282l.682-.947a.344.344 0 0 0-.225-.529l-1.162-.206a6.866 6.866 0 0 0-.14-.261l.49-1.069a.344.344 0 0 0-.327-.483l-1.193.021a8.94 8.94 0 0 0-.187-.227l.273-1.153a.344.344 0 0 0-.417-.417l-1.153.273a8.94 8.94 0 0 0-.227-.187l.021-1.193a.344.344 0 0 0-.483-.327l-1.069.49a6.866 6.866 0 0 0-.261-.14l-.206-1.162a.344.344 0 0 0-.529-.225l-.947.682a8.392 8.392 0 0 0-.282-.086l-.409-1.093a.344.344 0 0 0-.571-.114l-.797.855a13.559 13.559 0 0 0-.29-.028l-.616-.995a.344.344 0 0 0-.583 0l-.616.995a13.559 13.559 0 0 0-.29.028l-.797-.855a.344.344 0 0 0-.571.114l-.409 1.093a8.392 8.392 0 0 0-.282.086l-.947-.682a.344.344 0 0 0-.529.225l-.206 1.162a6.866 6.866 0 0 0-.261.14l-1.069-.49a.344.344 0 0 0-.483.327l.021 1.193a8.94 8.94 0 0 0-.227.187l-1.153-.273a.344.344 0 0 0-.417.417l.273 1.153a8.94 8.94 0 0 0-.187.227l-1.193-.021a.344.344 0 0 0-.327.483l.49 1.069a6.866 6.866 0 0 0-.14.261l-1.162.206a.344.344 0 0 0-.225.529l.682.947a8.392 8.392 0 0 0-.086.282l-1.093.409a.344.344 0 0 0-.114.571l.855.797a13.559 13.559 0 0 0-.028.29l-.995.616a.344.344 0 0 0 0 .583l.995.616c.008.097.017.194.028.29l-.855.797a.344.344 0 0 0 .114.571l1.093.409c.026.095.055.189.086.282l-.682.947a.344.344 0 0 0 .225.529l1.162.206c.045.088.091.175.14.261l-.49 1.069a.344.344 0 0 0 .327.483l1.193-.021c.061.077.123.152.187.227l-.273 1.153a.344.344 0 0 0 .417.417l1.153-.273c.074.064.149.127.227.187l-.021 1.193a.344.344 0 0 0 .483.327l1.069-.49c.086.049.173.095.261.14l.206 1.162a.344.344 0 0 0 .529.225l.947-.682c.093.031.187.06.282.086l.409 1.093a.344.344 0 0 0 .571.114l.797-.855c.096.011.193.02.29.028l.616.995a.344.344 0 0 0 .583 0l.616-.995c.097-.008.194-.017.29-.028l.797.855a.344.344 0 0 0 .571-.114l.409-1.093c.095-.026.189-.055.282-.086l.947.682a.344.344 0 0 0 .529-.225l.206-1.162c.088-.045.175-.091.261-.14l1.069.49a.344.344 0 0 0 .483-.327l-.021-1.193c.077-.061.152-.123.227-.187l1.153.273a.344.344 0 0 0 .417-.417l-.273-1.153c.064-.074.127-.149.187-.227l1.193.021a.344.344 0 0 0 .327-.483l-.49-1.069c.049-.086.095-.173.14-.261l1.162-.206a.344.344 0 0 0 .225-.529l-.682-.947c.031-.093.06-.187.086-.282l1.093-.409a.344.344 0 0 0 .114-.571l-.855-.797c.011-.096.02-.193.028-.29l.995-.616a.344.344 0 0 0 0-.583zM12 18.858a6.858 6.858 0 1 1 0-13.716 6.858 6.858 0 0 1 0 13.716z"
+            />
+          </svg>
+          Rust
+        </span>
+      </div>
+
+      <!-- Menu Bar Preview -->
+      <div class="menubar-preview">
+        <div class="menubar-mockup">
+          <!-- Header with tabs and controls -->
+          <div class="menubar-header">
+            <!-- Tab Switcher -->
+            <div class="menubar-tabs">
+              <button
+                class="menubar-tab active"
+                id="tab-vercel"
+                onclick="switchTab('vercel')"
+              >
+                Vercel
+              </button>
+              <button
+                class="menubar-tab"
+                id="tab-github"
+                onclick="switchTab('github')"
+              >
+                GitHub
+              </button>
+            </div>
+
+            <!-- Separator -->
+            <div class="menubar-separator"></div>
+
+            <!-- Account Switcher - Vercel -->
+            <div class="menubar-account" id="account-vercel">
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 76 65"
+                fill="currentColor"
+              >
+                <path d="M37.5274 0L75.0548 65H0L37.5274 0Z" />
+              </svg>
+              <span>im-vercel</span>
+              <svg
+                width="10"
+                height="10"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+              >
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </div>
+
+            <!-- Account Switcher - GitHub (hidden by default) -->
+            <div
+              class="menubar-account"
+              id="account-github"
+              style="display: none"
+            >
+              <img
+                src="https://github.com/waseemmaya.png"
+                alt="Avatar"
+                class="menubar-avatar"
+              />
+              <span>waseem</span>
+              <svg
+                width="10"
+                height="10"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+              >
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="menubar-actions">
+              <button class="menubar-action" title="Refresh">
+                <svg
+                  width="13"
+                  height="13"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <polyline points="1 4 1 10 7 10" />
+                  <polyline points="23 20 23 14 17 14" />
+                  <path
+                    d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"
+                  />
+                </svg>
+              </button>
+              <button class="menubar-action pinned" title="Pin window">
+                <svg
+                  width="13"
+                  height="13"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M12 17v5M9 10.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24V16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V7a1 1 0 0 1 1-1 2 2 0 0 0 0-4H8a2 2 0 0 0 0 4 1 1 0 0 1 1 1z"
+                  />
+                </svg>
+              </button>
+              <button class="menubar-action" title="Settings">
+                <svg
+                  width="13"
+                  height="13"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"
+                  />
+                  <circle cx="12" cy="12" r="3" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- ==================== VERCEL TAB CONTENT ==================== -->
+          <div class="menubar-list" id="list-vercel">
+            <!-- Vercel Item 1 - Success -->
+            <div class="list-item">
+              <div class="status-dot success"></div>
+              <div class="item-content">
+                <div class="item-header">
+                  <div class="item-project">
+                    <svg
+                      width="11"
+                      height="11"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"
+                      />
+                    </svg>
+                    <span>crm.creditmarket.ae</span>
+                  </div>
+                  <button class="item-link" title="Open website">
+                    <svg
+                      width="10"
+                      height="10"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                    >
+                      <circle cx="12" cy="12" r="10" />
+                      <line x1="2" y1="12" x2="22" y2="12" />
+                      <path
+                        d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                      />
+                    </svg>
+                  </button>
+                  <span class="item-time">8 hours ago</span>
+                </div>
+                <div class="item-commit">
+                  <svg
+                    width="11"
+                    height="11"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <circle cx="12" cy="12" r="3" />
+                    <line x1="3" y1="12" x2="9" y2="12" />
+                    <line x1="15" y1="12" x2="21" y2="12" />
+                  </svg>
+                  <span>updates for feedback</span>
+                </div>
+                <div class="item-meta">
+                  <span class="meta-tag"
+                    ><svg
+                      width="9"
+                      height="9"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                    >
+                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                      <circle cx="12" cy="7" r="4" /></svg
+                    >inzamamulhaq-4019</span
+                  >
+                  <span class="meta-tag"
+                    ><svg
+                      width="9"
+                      height="9"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                    >
+                      <line x1="6" y1="3" x2="6" y2="15" />
+                      <circle cx="18" cy="6" r="3" />
+                      <circle cx="6" cy="18" r="3" />
+                      <path d="M18 9a9 9 0 0 1-9 9" /></svg
+                    >feat/home-loan-finalization</span
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- Vercel Item 2 - Error -->
+            <div class="list-item">
+              <div class="status-dot error"></div>
+              <div class="item-content">
+                <div class="item-header">
+                  <div class="item-project">
+                    <svg
+                      width="11"
+                      height="11"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"
+                      />
+                    </svg>
+                    <span>creditmarket.ae</span>
+                  </div>
+                  <button class="item-link" title="Open website">
+                    <svg
+                      width="10"
+                      height="10"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                    >
+                      <circle cx="12" cy="12" r="10" />
+                      <line x1="2" y1="12" x2="22" y2="12" />
+                      <path
+                        d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                      />
+                    </svg>
+                  </button>
+                  <span class="item-time">8 hours ago</span>
+                </div>
+                <div class="item-commit">
+                  <svg
+                    width="11"
+                    height="11"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <circle cx="12" cy="12" r="3" />
+                    <line x1="3" y1="12" x2="9" y2="12" />
+                    <line x1="15" y1="12" x2="21" y2="12" />
+                  </svg>
+                  <span>updates for feedback</span>
+                </div>
+                <div class="item-meta">
+                  <span class="meta-tag"
+                    ><svg
+                      width="9"
+                      height="9"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                    >
+                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                      <circle cx="12" cy="7" r="4" /></svg
+                    >inzamamulhaq-4019</span
+                  >
+                  <span class="meta-tag"
+                    ><svg
+                      width="9"
+                      height="9"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                    >
+                      <line x1="6" y1="3" x2="6" y2="15" />
+                      <circle cx="18" cy="6" r="3" />
+                      <circle cx="6" cy="18" r="3" />
+                      <path d="M18 9a9 9 0 0 1-9 9" /></svg
+                    >feat/home-loan-finalization</span
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- Vercel Item 3 - Success -->
+            <div class="list-item">
+              <div class="status-dot success"></div>
+              <div class="item-content">
+                <div class="item-header">
+                  <div class="item-project">
+                    <svg
+                      width="11"
+                      height="11"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"
+                      />
+                    </svg>
+                    <span>chunli</span>
+                  </div>
+                  <button class="item-link" title="Open website">
+                    <svg
+                      width="10"
+                      height="10"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                    >
+                      <circle cx="12" cy="12" r="10" />
+                      <line x1="2" y1="12" x2="22" y2="12" />
+                      <path
+                        d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                      />
+                    </svg>
+                  </button>
+                  <span class="item-time">9 hours ago</span>
+                </div>
+                <div class="item-commit">
+                  <svg
+                    width="11"
+                    height="11"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <circle cx="12" cy="12" r="3" />
+                    <line x1="3" y1="12" x2="9" y2="12" />
+                    <line x1="15" y1="12" x2="21" y2="12" />
+                  </svg>
+                  <span
+                    >Merge pull request #2690 from InsuranceMarket-ae/main
+                    Mai...</span
+                  >
+                </div>
+                <div class="item-meta">
+                  <span class="meta-tag"
+                    ><svg
+                      width="9"
+                      height="9"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                    >
+                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                      <circle cx="12" cy="7" r="4" /></svg
+                    >abdulsubhan1</span
+                  >
+                  <span class="meta-tag"
+                    ><svg
+                      width="9"
+                      height="9"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                    >
+                      <line x1="6" y1="3" x2="6" y2="15" />
+                      <circle cx="18" cy="6" r="3" />
+                      <circle cx="6" cy="18" r="3" />
+                      <path d="M18 9a9 9 0 0 1-9 9" /></svg
+                    >develop</span
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- Vercel Item 4 - Success -->
+            <div class="list-item">
+              <div class="status-dot success"></div>
+              <div class="item-content">
+                <div class="item-header">
+                  <div class="item-project">
+                    <svg
+                      width="11"
+                      height="11"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"
+                      />
+                    </svg>
+                    <span>alfred-gpt</span>
+                  </div>
+                  <button class="item-link" title="Open website">
+                    <svg
+                      width="10"
+                      height="10"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                    >
+                      <circle cx="12" cy="12" r="10" />
+                      <line x1="2" y1="12" x2="22" y2="12" />
+                      <path
+                        d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                      />
+                    </svg>
+                  </button>
+                  <span class="item-time">9 hours ago</span>
+                </div>
+                <div class="item-commit">
+                  <svg
+                    width="11"
+                    height="11"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <circle cx="12" cy="12" r="3" />
+                    <line x1="3" y1="12" x2="9" y2="12" />
+                    <line x1="15" y1="12" x2="21" y2="12" />
+                  </svg>
+                  <span>fix(): login + otp screen</span>
+                </div>
+                <div class="item-meta">
+                  <span class="meta-tag"
+                    ><svg
+                      width="9"
+                      height="9"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                    >
+                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                      <circle cx="12" cy="7" r="4" /></svg
+                    >zeeshanbutt-1210</span
+                  >
+                  <span class="meta-tag"
+                    ><svg
+                      width="9"
+                      height="9"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                    >
+                      <line x1="6" y1="3" x2="6" y2="15" />
+                      <circle cx="18" cy="6" r="3" />
+                      <circle cx="6" cy="18" r="3" />
+                      <path d="M18 9a9 9 0 0 1-9 9" /></svg
+                    >fix/mobile-responsive</span
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- Vercel Item 5 - Success with Production -->
+            <div class="list-item">
+              <div class="status-dot success"></div>
+              <div class="item-content">
+                <div class="item-header">
+                  <div class="item-project">
+                    <svg
+                      width="11"
+                      height="11"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"
+                      />
+                    </svg>
+                    <span>chunli</span>
+                  </div>
+                  <button class="item-link" title="Open website">
+                    <svg
+                      width="10"
+                      height="10"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                    >
+                      <circle cx="12" cy="12" r="10" />
+                      <line x1="2" y1="12" x2="22" y2="12" />
+                      <path
+                        d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                      />
+                    </svg>
+                  </button>
+                  <span class="item-time">9 hours ago</span>
+                </div>
+                <div class="item-commit">
+                  <svg
+                    width="11"
+                    height="11"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <circle cx="12" cy="12" r="3" />
+                    <line x1="3" y1="12" x2="9" y2="12" />
+                    <line x1="15" y1="12" x2="21" y2="12" />
+                  </svg>
+                  <span
+                    >Merge pull request #2644 from
+                    InsuranceMarket-ae/feat/car-...</span
+                  >
+                </div>
+                <div class="item-meta">
+                  <span class="meta-tag"
+                    ><svg
+                      width="9"
+                      height="9"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                    >
+                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                      <circle cx="12" cy="7" r="4" /></svg
+                    >mafzalkhan1997</span
+                  >
+                  <span class="meta-tag"
+                    ><svg
+                      width="9"
+                      height="9"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                    >
+                      <line x1="6" y1="3" x2="6" y2="15" />
+                      <circle cx="18" cy="6" r="3" />
+                      <circle cx="6" cy="18" r="3" />
+                      <path d="M18 9a9 9 0 0 1-9 9" /></svg
+                    >main</span
+                  >
+                  <span class="meta-tag production"
+                    ><svg
+                      width="9"
+                      height="9"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                    >
+                      <path
+                        d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"
+                      />
+                      <path
+                        d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"
+                      />
+                      <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0" />
+                      <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" /></svg
+                    >Production</span
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- Vercel Item 6 - Success -->
+            <div class="list-item">
+              <div class="status-dot success"></div>
+              <div class="item-content">
+                <div class="item-header">
+                  <div class="item-project">
+                    <svg
+                      width="11"
+                      height="11"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"
+                      />
+                    </svg>
+                    <span>shelter</span>
+                  </div>
+                  <button class="item-link" title="Open website">
+                    <svg
+                      width="10"
+                      height="10"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                    >
+                      <circle cx="12" cy="12" r="10" />
+                      <line x1="2" y1="12" x2="22" y2="12" />
+                      <path
+                        d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                      />
+                    </svg>
+                  </button>
+                  <span class="item-time">10 hours ago</span>
+                </div>
+                <div class="item-commit">
+                  <svg
+                    width="11"
+                    height="11"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <circle cx="12" cy="12" r="3" />
+                    <line x1="3" y1="12" x2="9" y2="12" />
+                    <line x1="15" y1="12" x2="21" y2="12" />
+                  </svg>
+                  <span
+                    >refactor: update cycle dropdown fetching to include
+                    language...</span
+                  >
+                </div>
+                <div class="item-meta">
+                  <span class="meta-tag"
+                    ><svg
+                      width="9"
+                      height="9"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                    >
+                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                      <circle cx="12" cy="7" r="4" /></svg
+                    >waseemdilsherim</span
+                  >
+                  <span class="meta-tag"
+                    ><svg
+                      width="9"
+                      height="9"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                    >
+                      <line x1="6" y1="3" x2="6" y2="15" />
+                      <circle cx="18" cy="6" r="3" />
+                      <circle cx="6" cy="18" r="3" />
+                      <path d="M18 9a9 9 0 0 1-9 9" /></svg
+                    >update/axios-to-fetch-v2</span
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- Vercel Item 7 - Success -->
+            <div class="list-item">
+              <div class="status-dot success"></div>
+              <div class="item-content">
+                <div class="item-header">
+                  <div class="item-project">
+                    <svg
+                      width="11"
+                      height="11"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"
+                      />
+                    </svg>
+                    <span>chunli</span>
+                  </div>
+                  <button class="item-link" title="Open website">
+                    <svg
+                      width="10"
+                      height="10"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                    >
+                      <circle cx="12" cy="12" r="10" />
+                      <line x1="2" y1="12" x2="22" y2="12" />
+                      <path
+                        d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                      />
+                    </svg>
+                  </button>
+                  <span class="item-time">10 hours ago</span>
+                </div>
+                <div class="item-commit">
+                  <svg
+                    width="11"
+                    height="11"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <circle cx="12" cy="12" r="3" />
+                    <line x1="3" y1="12" x2="9" y2="12" />
+                    <line x1="15" y1="12" x2="21" y2="12" />
+                  </svg>
+                  <span>Merge with feat/smartphone-insurance</span>
+                </div>
+                <div class="item-meta">
+                  <span class="meta-tag"
+                    ><svg
+                      width="9"
+                      height="9"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                    >
+                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                      <circle cx="12" cy="7" r="4" /></svg
+                    >waseemmaya</span
+                  >
+                  <span class="meta-tag"
+                    ><svg
+                      width="9"
+                      height="9"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                    >
+                      <line x1="6" y1="3" x2="6" y2="15" />
+                      <circle cx="18" cy="6" r="3" />
+                      <circle cx="6" cy="18" r="3" />
+                      <path d="M18 9a9 9 0 0 1-9 9" /></svg
+                    >develop</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ==================== GITHUB TAB CONTENT ==================== -->
+          <div class="menubar-list" id="list-github" style="display: none">
+            <!-- GitHub Workflow Item 1 - Success -->
+            <div class="list-item">
+              <div class="status-dot success"></div>
+              <div class="item-content">
+                <div class="item-header">
+                  <div class="item-project">
+                    <svg
+                      width="11"
+                      height="11"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"
+                      />
+                    </svg>
+                    <span>deploy-bar</span>
+                  </div>
+                  <button class="item-link">
+                    <svg
+                      width="10"
+                      height="10"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                    >
+                      <path
+                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                      />
+                      <polyline points="15 3 21 3 21 9" />
+                      <line x1="10" y1="14" x2="21" y2="3" />
+                    </svg>
+                  </button>
+                  <span class="item-time">3 min ago</span>
+                </div>
+                <div class="item-commit">
+                  <svg
+                    width="11"
+                    height="11"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <circle cx="12" cy="12" r="3" />
+                    <line x1="3" y1="12" x2="9" y2="12" />
+                    <line x1="15" y1="12" x2="21" y2="12" />
+                  </svg>
+                  <span>major update - new ui</span>
+                </div>
+                <div class="item-meta">
+                  <span class="meta-tag workflow">
+                    <svg
+                      width="9"
+                      height="9"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                    </svg>
+                    Auto Version ...
+                  </span>
+                  <span class="meta-tag">
+                    <svg
+                      width="9"
+                      height="9"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                    >
+                      <path
+                        d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"
+                      ></path>
+                      <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    waseemmaya
+                  </span>
+                  <span class="meta-tag">
+                    <svg
+                      width="9"
+                      height="9"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                    >
+                      <line x1="6" y1="3" x2="6" y2="15"></line>
+                      <circle cx="18" cy="6" r="3"></circle>
+                      <circle cx="6" cy="18" r="3"></circle>
+                      <path d="M18 9a9 9 0 0 1-9 9"></path>
+                    </svg>
+                    main
+                  </span>
+                  <span class="meta-tag event">
+                    <svg
+                      width="9"
+                      height="9"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                    >
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                    Push
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- GitHub Workflow Item 2 - Building -->
+            <div class="list-item">
+              <div class="status-dot building">
+                <div class="ping"></div>
+              </div>
+              <div class="item-content">
+                <div class="item-header">
+                  <div class="item-project">
+                    <svg
+                      width="11"
+                      height="11"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"
+                      />
+                    </svg>
+                    <span>deploy-bar</span>
+                  </div>
+                  <button class="item-link">
+                    <svg
+                      width="10"
+                      height="10"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                    >
+                      <path
+                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                      />
+                      <polyline points="15 3 21 3 21 9" />
+                      <line x1="10" y1="14" x2="21" y2="3" />
+                    </svg>
+                  </button>
+                  <span class="item-time">
+                    <svg
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      class="spinner"
+                    >
+                      <path d="M21 12a9 9 0 1 1-6.219-8.56" />
+                    </svg>
+                  </span>
+                </div>
+                <div class="item-commit">
+                  <svg
+                    width="11"
+                    height="11"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <circle cx="12" cy="12" r="3" />
+                    <line x1="3" y1="12" x2="9" y2="12" />
+                    <line x1="15" y1="12" x2="21" y2="12" />
+                  </svg>
+                  <span>major update - new ui</span>
+                </div>
+                <div class="item-meta">
+                  <span class="meta-tag workflow">
+                    <svg
+                      width="9"
+                      height="9"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                    </svg>
+                    Build Tauri App
+                  </span>
+                  <span class="meta-tag">
+                    <svg
+                      width="9"
+                      height="9"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                    >
+                      <path
+                        d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"
+                      ></path>
+                      <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    waseemmaya
+                  </span>
+                  <span class="meta-tag">
+                    <svg
+                      width="9"
+                      height="9"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                    >
+                      <line x1="6" y1="3" x2="6" y2="15"></line>
+                      <circle cx="18" cy="6" r="3"></circle>
+                      <circle cx="6" cy="18" r="3"></circle>
+                      <path d="M18 9a9 9 0 0 1-9 9"></path>
+                    </svg>
+                    main
+                  </span>
+                  <span class="meta-tag event">
+                    <svg
+                      width="9"
+                      height="9"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                    >
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                    Push
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- GitHub Workflow Item 3 - Success (different repo) -->
+            <div class="list-item">
+              <div class="status-dot success"></div>
+              <div class="item-content">
+                <div class="item-header">
+                  <div class="item-project">
+                    <svg
+                      width="11"
+                      height="11"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"
+                      />
+                    </svg>
+                    <span>crackuni</span>
+                  </div>
+                  <button class="item-link">
+                    <svg
+                      width="10"
+                      height="10"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                    >
+                      <path
+                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                      />
+                      <polyline points="15 3 21 3 21 9" />
+                      <line x1="10" y1="14" x2="21" y2="3" />
+                    </svg>
+                  </button>
+                  <span class="item-time">2 hours ago</span>
+                </div>
+                <div class="item-commit">
+                  <svg
+                    width="11"
+                    height="11"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <circle cx="12" cy="12" r="3" />
+                    <line x1="3" y1="12" x2="9" y2="12" />
+                    <line x1="15" y1="12" x2="21" y2="12" />
+                  </svg>
+                  <span
+                    >feat: Add FcmToken null checks, make student email
+                    required...</span
+                  >
+                </div>
+                <div class="item-meta">
+                  <span class="meta-tag workflow">
+                    <svg
+                      width="9"
+                      height="9"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                    </svg>
+                    Preview depl...
+                  </span>
+                  <span class="meta-tag">
+                    <svg
+                      width="9"
+                      height="9"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                    >
+                      <path
+                        d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"
+                      ></path>
+                      <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    hamza-10702
+                  </span>
+                  <span class="meta-tag">
+                    <svg
+                      width="9"
+                      height="9"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                    >
+                      <line x1="6" y1="3" x2="6" y2="15"></line>
+                      <circle cx="18" cy="6" r="3"></circle>
+                      <circle cx="6" cy="18" r="3"></circle>
+                      <path d="M18 9a9 9 0 0 1-9 9"></path>
+                    </svg>
+                    fix/remove-...
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- GitHub Workflow Item 4 - Failed -->
+            <div class="list-item">
+              <div class="status-dot error"></div>
+              <div class="item-content">
+                <div class="item-header">
+                  <div class="item-project">
+                    <svg
+                      width="11"
+                      height="11"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"
+                      />
+                    </svg>
+                    <span>crackuni-be</span>
+                  </div>
+                  <button class="item-link">
+                    <svg
+                      width="10"
+                      height="10"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                    >
+                      <path
+                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                      />
+                      <polyline points="15 3 21 3 21 9" />
+                      <line x1="10" y1="14" x2="21" y2="3" />
+                    </svg>
+                  </button>
+                  <button class="item-rerun" title="Re-run workflow">
+                    <svg
+                      width="10"
+                      height="10"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                    >
+                      <path
+                        d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"
+                      />
+                      <path d="M3 3v5h5" />
+                    </svg>
+                  </button>
+                  <span class="item-time">4 hours ago</span>
+                </div>
+                <div class="item-commit">
+                  <svg
+                    width="11"
+                    height="11"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <circle cx="12" cy="12" r="3" />
+                    <line x1="3" y1="12" x2="9" y2="12" />
+                    <line x1="15" y1="12" x2="21" y2="12" />
+                  </svg>
+                  <span
+                    >Merge branch 'feature/live-class-filter-badge' of
+                    https://githu...</span
+                  >
+                </div>
+                <div class="item-meta">
+                  <span class="meta-tag workflow">
+                    <svg
+                      width="9"
+                      height="9"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                    </svg>
+                    Deploy to Go...
+                  </span>
+                  <span class="meta-tag">
+                    <svg
+                      width="9"
+                      height="9"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                    >
+                      <path
+                        d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"
+                      ></path>
+                      <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    AbdulSubhan1
+                  </span>
+                  <span class="meta-tag">
+                    <svg
+                      width="9"
+                      height="9"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                    >
+                      <line x1="6" y1="3" x2="6" y2="15"></line>
+                      <circle cx="18" cy="6" r="3"></circle>
+                      <circle cx="6" cy="18" r="3"></circle>
+                      <path d="M18 9a9 9 0 0 1-9 9"></path>
+                    </svg>
+                    test
+                  </span>
+                  <span class="meta-tag event">
+                    <svg
+                      width="9"
+                      height="9"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                    >
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                    Push
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- GitHub Workflow Item 5 - Failed -->
+            <div class="list-item">
+              <div class="status-dot error"></div>
+              <div class="item-content">
+                <div class="item-header">
+                  <div class="item-project">
+                    <svg
+                      width="11"
+                      height="11"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"
+                      />
+                    </svg>
+                    <span>crackuni</span>
+                  </div>
+                  <button class="item-link">
+                    <svg
+                      width="10"
+                      height="10"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                    >
+                      <path
+                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                      />
+                      <polyline points="15 3 21 3 21 9" />
+                      <line x1="10" y1="14" x2="21" y2="3" />
+                    </svg>
+                  </button>
+                  <button class="item-rerun" title="Re-run workflow">
+                    <svg
+                      width="10"
+                      height="10"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                    >
+                      <path
+                        d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"
+                      />
+                      <path d="M3 3v5h5" />
+                    </svg>
+                  </button>
+                  <span class="item-time">4 hours ago</span>
+                </div>
+                <div class="item-commit">
+                  <svg
+                    width="11"
+                    height="11"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <circle cx="12" cy="12" r="3" />
+                    <line x1="3" y1="12" x2="9" y2="12" />
+                    <line x1="15" y1="12" x2="21" y2="12" />
+                  </svg>
+                  <span
+                    >Merge pull request #193 from
+                    rayonstudios/feature/live-class...</span
+                  >
+                </div>
+                <div class="item-meta">
+                  <span class="meta-tag workflow">
+                    <svg
+                      width="9"
+                      height="9"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                    </svg>
+                    Deploy to Clo...
+                  </span>
+                  <span class="meta-tag">
+                    <svg
+                      width="9"
+                      height="9"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                    >
+                      <path
+                        d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"
+                      ></path>
+                      <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    AbdulSubhan1
+                  </span>
+                  <span class="meta-tag">
+                    <svg
+                      width="9"
+                      height="9"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                    >
+                      <line x1="6" y1="3" x2="6" y2="15"></line>
+                      <circle cx="18" cy="6" r="3"></circle>
+                      <circle cx="6" cy="18" r="3"></circle>
+                      <path d="M18 9a9 9 0 0 1-9 9"></path>
+                    </svg>
+                    test
+                  </span>
+                  <span class="meta-tag event">
+                    <svg
+                      width="9"
+                      height="9"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                    >
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                    Push
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- GitHub Workflow Item 6 - Success -->
+            <div class="list-item">
+              <div class="status-dot success"></div>
+              <div class="item-content">
+                <div class="item-header">
+                  <div class="item-project">
+                    <svg
+                      width="11"
+                      height="11"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"
+                      />
+                    </svg>
+                    <span>crackuni</span>
+                  </div>
+                  <button class="item-link">
+                    <svg
+                      width="10"
+                      height="10"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                    >
+                      <path
+                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                      />
+                      <polyline points="15 3 21 3 21 9" />
+                      <line x1="10" y1="14" x2="21" y2="3" />
+                    </svg>
+                  </button>
+                  <span class="item-time">5 hours ago</span>
+                </div>
+                <div class="item-commit">
+                  <svg
+                    width="11"
+                    height="11"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <circle cx="12" cy="12" r="3" />
+                    <line x1="3" y1="12" x2="9" y2="12" />
+                    <line x1="15" y1="12" x2="21" y2="12" />
+                  </svg>
+                  <span>Feature/live class filter badge</span>
+                </div>
+                <div class="item-meta">
+                  <span class="meta-tag workflow">
+                    <svg
+                      width="9"
+                      height="9"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                    </svg>
+                    Preview depl...
+                  </span>
+                  <span class="meta-tag">
+                    <svg
+                      width="9"
+                      height="9"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                    >
+                      <path
+                        d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"
+                      ></path>
+                      <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    waseemmaya
+                  </span>
+                  <span class="meta-tag">
+                    <svg
+                      width="9"
+                      height="9"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                    >
+                      <line x1="6" y1="3" x2="6" y2="15"></line>
+                      <circle cx="18" cy="6" r="3"></circle>
+                      <circle cx="6" cy="18" r="3"></circle>
+                      <path d="M18 9a9 9 0 0 1-9 9"></path>
+                    </svg>
+                    main
+                  </span>
+                  <span class="meta-tag event">
+                    <svg
+                      width="9"
+                      height="9"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                    >
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                    Push
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- GitHub Workflow Item 7 - Building -->
+            <div class="list-item">
+              <div class="status-dot building">
+                <div class="ping"></div>
+              </div>
+              <div class="item-content">
+                <div class="item-header">
+                  <div class="item-project">
+                    <svg
+                      width="11"
+                      height="11"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"
+                      />
+                    </svg>
+                    <span>deploy-bar</span>
+                  </div>
+                  <button class="item-link">
+                    <svg
+                      width="10"
+                      height="10"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                    >
+                      <path
+                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                      />
+                      <polyline points="15 3 21 3 21 9" />
+                      <line x1="10" y1="14" x2="21" y2="3" />
+                    </svg>
+                  </button>
+                  <span class="item-time">
+                    <svg
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      class="spinner"
+                    >
+                      <path d="M21 12a9 9 0 1 1-6.219-8.56" />
+                    </svg>
+                  </span>
+                </div>
+                <div class="item-commit">
+                  <svg
+                    width="11"
+                    height="11"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <circle cx="12" cy="12" r="3" />
+                    <line x1="3" y1="12" x2="9" y2="12" />
+                    <line x1="15" y1="12" x2="21" y2="12" />
+                  </svg>
+                  <span>major update - new ui</span>
+                </div>
+                <div class="item-meta">
+                  <span class="meta-tag workflow">
+                    <svg
+                      width="9"
+                      height="9"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                    </svg>
+                    Build Tauri App
+                  </span>
+                  <span class="meta-tag">
+                    <svg
+                      width="9"
+                      height="9"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                    >
+                      <path
+                        d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"
+                      ></path>
+                      <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    waseemmaya
+                  </span>
+                  <span class="meta-tag">
+                    <svg
+                      width="9"
+                      height="9"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                    >
+                      <line x1="6" y1="3" x2="6" y2="15"></line>
+                      <circle cx="18" cy="6" r="3"></circle>
+                      <circle cx="6" cy="18" r="3"></circle>
+                      <path d="M18 9a9 9 0 0 1-9 9"></path>
+                    </svg>
+                    main
+                  </span>
+                  <span class="meta-tag event">
+                    <svg
+                      width="9"
+                      height="9"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                    >
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                    Push
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <br />
+      <div class="scroll-indicator">
+        <span>Scroll to explore</span>
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <polyline points="6 9 12 15 18 9" />
+        </svg>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features" aria-labelledby="features-heading">
+      <div class="section-header">
+        <p class="section-label mono">Features</p>
+        <h2 class="section-title" id="features-heading">
+          Everything you need.<br />Nothing you don't.
+        </h2>
+        <p class="section-desc">
+          Built for developers who ship fast and need to stay informed without
+          context switching.
+        </p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3>Real-time Updates</h3>
+          <p>
+            Deployments refresh every 30 seconds automatically. Always know your
+            current deployment status without manual checking.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🎯</div>
+          <h3>Status at a Glance</h3>
+          <p>
+            Color-coded indicators for Ready, Building, Error, Queued, and
+            Canceled states. Instantly understand your deployment health.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔔</div>
+          <h3>Native Notifications</h3>
+          <p>
+            Get notified when deployments fail. Never miss a broken build again
+            — catch issues before your users do.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔐</div>
+          <h3>Secure by Default</h3>
+          <p>
+            Your Vercel tokens are stored in the macOS system keychain. No plain
+            text storage, no localStorage exposure.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">👥</div>
+          <h3>Multiple Accounts</h3>
+          <p>
+            Switch between personal and team accounts effortlessly. Perfect for
+            developers working across multiple organizations.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📌</div>
+          <h3>Pin to Stay Open</h3>
+          <p>
+            Keep the window open while you work. Unpin and it auto-hides when
+            you click away — distraction-free monitoring.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🐙</div>
+          <h3>GitHub Actions</h3>
+          <p>
+            Monitor your CI/CD pipelines alongside Vercel. Track workflow runs,
+            see build statuses, and catch failures instantly.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔀</div>
+          <h3>Unified Dashboard</h3>
+          <p>
+            One place for all your deployments and workflows. Switch between
+            Vercel and GitHub Actions with a single click.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Status Colors Section -->
+    <section class="status-section">
+      <div class="section-header">
+        <p class="section-label mono">Status Indicators</p>
+        <h2 class="section-title">Understand status instantly</h2>
+      </div>
+      <div class="status-grid">
+        <div class="status-item">
+          <div class="status-indicator" style="background: #2dd4bf"></div>
+          <span class="status-label">Ready</span>
+        </div>
+        <div class="status-item">
+          <div
+            class="status-indicator"
+            style="background: #f97316; animation: pulse 1.5s infinite"
+          ></div>
+          <span class="status-label">Building</span>
+        </div>
+        <div class="status-item">
+          <div class="status-indicator" style="background: #ef4444"></div>
+          <span class="status-label">Error</span>
+        </div>
+        <div class="status-item">
+          <div class="status-indicator" style="background: #eab308"></div>
+          <span class="status-label">Queued</span>
+        </div>
+        <div class="status-item">
+          <div class="status-indicator" style="background: #71717a"></div>
+          <span class="status-label">Canceled</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq" aria-labelledby="faq-heading">
+      <div class="section-header">
+        <p class="section-label mono">FAQ</p>
+        <h2 class="section-title" id="faq-heading">
+          Frequently Asked Questions
+        </h2>
+        <p class="section-desc">Everything you need to know about DeployBar</p>
+      </div>
+
+      <div class="faq-container">
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>What is DeployBar?</span>
+            <svg
+              class="faq-icon"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </summary>
+          <div class="faq-answer">
+            <p>
+              DeployBar is a free, open-source macOS menu bar app that lets you
+              monitor your Vercel deployments and GitHub Actions workflows in
+              real-time. Instead of constantly switching tabs to check
+              deployment status, you get instant notifications and updates right
+              from your menu bar.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>Is DeployBar free?</span>
+            <svg
+              class="faq-icon"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </summary>
+          <div class="faq-answer">
+            <p>
+              Yes! DeployBar is completely free and open-source. You can
+              download it, use it, and even contribute to its development on
+              GitHub.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>Which macOS versions are supported?</span>
+            <svg
+              class="faq-icon"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </summary>
+          <div class="faq-answer">
+            <p>
+              DeployBar works on macOS 11 (Big Sur) and later. It supports both
+              Apple Silicon (M1/M2/M3) and Intel-based Macs.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>How do I get started?</span>
+            <svg
+              class="faq-icon"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </summary>
+          <div class="faq-answer">
+            <ol>
+              <li>Download DeployBar for your Mac (Apple Silicon or Intel)</li>
+              <li>
+                Generate a Vercel token at
+                <a
+                  href="https://vercel.com/account/tokens"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >vercel.com/account/tokens</a
+                >
+              </li>
+              <li>Generate a GitHub token with 'repo' and 'workflow' scopes</li>
+              <li>Add both tokens in DeployBar settings</li>
+              <li>
+                Your deployments will start appearing in the menu bar
+                automatically
+              </li>
+            </ol>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>How often does DeployBar refresh?</span>
+            <svg
+              class="faq-icon"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </summary>
+          <div class="faq-answer">
+            <p>
+              DeployBar automatically refreshes your deployments every 30
+              seconds. You can also manually refresh anytime by clicking the
+              refresh icon in the menu bar.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>Are my tokens stored securely?</span>
+            <svg
+              class="faq-icon"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </summary>
+          <div class="faq-answer">
+            <p>
+              Absolutely! Your Vercel and GitHub tokens are stored in the macOS
+              system keychain, not in plain text or localStorage. This is the
+              same secure storage that Apple uses for passwords and sensitive
+              data.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>Can I monitor private repositories and deployments?</span>
+            <svg
+              class="faq-icon"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </summary>
+          <div class="faq-answer">
+            <p>
+              Yes! DeployBar works with both public and private repositories. As
+              long as your GitHub token has the correct permissions, you can
+              monitor all your private deployments and workflows.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>Does DeployBar support multiple accounts?</span>
+            <svg
+              class="faq-icon"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </summary>
+          <div class="faq-answer">
+            <p>
+              Yes! You can switch between personal and team accounts
+              effortlessly. Perfect for developers working across multiple
+              organizations.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>Will I get notifications for failed deployments?</span>
+            <svg
+              class="faq-icon"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </summary>
+          <div class="faq-answer">
+            <p>
+              Yes! DeployBar sends native macOS notifications when deployments
+              fail, so you can catch issues immediately before your users do.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>Why isn't the app opening after download?</span>
+            <svg
+              class="faq-icon"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </summary>
+          <div class="faq-answer">
+            <p>
+              Since DeployBar isn't notarized by Apple (to avoid the $99/year
+              fee), macOS blocks it by default. Run this command in Terminal:
+            </p>
+            <div class="faq-code mono">
+              <span class="cmd">$</span> xattr -d com.apple.quarantine
+              /Applications/DeployBar.app
+            </div>
+            <p style="margin-top: 0.75rem">
+              Then open DeployBar from Applications. This is a one-time setup.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>How do I uninstall DeployBar?</span>
+            <svg
+              class="faq-icon"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </summary>
+          <div class="faq-answer">
+            <p>
+              Simply drag DeployBar.app from Applications to Trash. Your tokens
+              will be removed from the keychain automatically.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>Can I contribute to DeployBar?</span>
+            <svg
+              class="faq-icon"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </summary>
+          <div class="faq-answer">
+            <p>
+              Absolutely! DeployBar is open-source. Visit
+              <a
+                href="https://github.com/waseemmaya/deploy-bar"
+                target="_blank"
+                rel="noopener noreferrer"
+                >github.com/waseemmaya/deploy-bar</a
+              >
+              to report issues, suggest features, or submit pull requests.
+            </p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section
+      class="how-it-works"
+      id="how-it-works"
+      aria-labelledby="setup-heading"
+    >
+      <div class="section-header">
+        <p class="section-label mono">Setup</p>
+        <h2 class="section-title" id="setup-heading">
+          Up and running in 2 minutes
+        </h2>
+      </div>
+
+      <div class="steps-container">
+        <div class="step">
+          <div class="step-number mono">01</div>
+          <div class="step-content">
+            <h3>Install DeployBar</h3>
+            <p style="margin-bottom: 1rem">
+              <strong>Option A:</strong> Install via Homebrew (recommended):
+            </p>
+            <div class="step-code mono">
+              <span class="cmd">$</span> brew tap waseemmaya/deploy-bar-updates
+              https://github.com/waseemmaya/deploy-bar-updates<br />
+              <span class="cmd">$</span> brew install --cask deploybar
+            </div>
+            <p style="margin-top: 1.5rem; margin-bottom: 1rem">
+              <strong>Option B:</strong> Manual download — grab the DMG from
+              below and drag to Applications. Since the app isn't notarized by
+              Apple (due to the $99/year fee), run this command in Terminal
+              before opening:
+            </p>
+            <div class="step-code mono">
+              <span class="cmd">$</span> xattr -d com.apple.quarantine
+              /Applications/DeployBar.app
+            </div>
+            <p
+              style="
+                font-size: 0.85rem;
+                color: var(--text-muted);
+                margin-top: 0.75rem;
+              "
+            >
+              If the command fails, try with
+              <code
+                style="
+                  background: var(--bg-elevated);
+                  padding: 0.1rem 0.4rem;
+                  border-radius: 4px;
+                  font-size: 0.85em;
+                "
+                >sudo</code
+              >
+              at the beginning. Then open DeployBar from Applications.
+            </p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-number mono">02</div>
+          <div class="step-content">
+            <h3>Generate a Vercel Token</h3>
+            <p>
+              Head to
+              <a
+                href="https://vercel.com/account/tokens"
+                target="_blank"
+                style="color: var(--accent-teal)"
+                >vercel.com/account/tokens</a
+              >
+              and create a new access token. Give it a descriptive name like
+              "DeployBar".
+            </p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-number mono">03</div>
+          <div class="step-content">
+            <h3>Generate a GitHub Token</h3>
+            <p>
+              Go to
+              <a
+                href="https://github.com/settings/tokens/new?scopes=repo,workflow"
+                target="_blank"
+                style="color: var(--accent-teal)"
+                >GitHub Token Settings</a
+              >
+              and create a personal access token with
+              <code
+                style="
+                  background: var(--bg-elevated);
+                  padding: 0.1rem 0.4rem;
+                  border-radius: 4px;
+                  font-size: 0.85em;
+                "
+                >repo</code
+              >
+              and
+              <code
+                style="
+                  background: var(--bg-elevated);
+                  padding: 0.1rem 0.4rem;
+                  border-radius: 4px;
+                  font-size: 0.85em;
+                "
+                >workflow</code
+              >
+              scopes to monitor your Actions.
+            </p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-number mono">04</div>
+          <div class="step-content">
+            <h3>Connect Your Accounts</h3>
+            <p>
+              Add your Vercel and GitHub tokens in DeployBar settings. They're
+              securely stored in your system keychain — you'll never need to
+              enter them again.
+            </p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-number mono">05</div>
+          <div class="step-content">
+            <h3>Monitor Everything</h3>
+            <p>
+              That's it! Your Vercel deployments and GitHub Actions will appear
+              in the menu bar. Click any item to open it in your browser.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section
+      class="cta-section"
+      id="download"
+      aria-labelledby="download-heading"
+    >
+      <h2 class="cta-title" id="download-heading">Ready to ship faster?</h2>
+      <p class="cta-desc">
+        Stop switching tabs to check deployments and CI status. Get DeployBar
+        and stay focused on what matters — your code.
+      </p>
+      <div class="download-buttons">
+        <a
+          href="https://raw.githubusercontent.com/waseemmaya/deploy-bar-updates/main/DeployBar_aarch64.dmg"
+          class="btn-primary"
+        >
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+            <polyline points="7 10 12 15 17 10" />
+            <line x1="12" y1="15" x2="12" y2="3" />
+          </svg>
+          Download for Apple Silicon
+        </a>
+        <a
+          href="https://raw.githubusercontent.com/waseemmaya/deploy-bar-updates/main/DeployBar_x64.dmg"
+          class="btn-secondary"
+        >
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+            <polyline points="7 10 12 15 17 10" />
+            <line x1="12" y1="15" x2="12" y2="3" />
+          </svg>
+          Download for Intel Mac
+        </a>
+      </div>
+      <p class="download-note">
+        <a
+          href="https://github.com/waseemmaya/deploy-bar-updates"
+          target="_blank"
+          >View all releases</a
+        >
+        &nbsp;·&nbsp;
+        <a href="https://github.com/waseemmaya/deploy-bar" target="_blank"
+          >Star on GitHub</a
+        >
+      </p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-left">
+          <div class="footer-logo">
+            <img src="logo.png" alt="DeployBar Logo" />
+          </div>
+          <span class="footer-text"
+            >Built with ☕ by
+            <a
+              href="https://github.com/waseemmaya"
+              target="_blank"
+              style="color: var(--text-secondary); text-decoration: none"
+              >@waseemmaya</a
+            ></span
+          >
+        </div>
+        <div class="footer-links">
+          <a href="https://github.com/waseemmaya/deploy-bar" target="_blank"
+            >GitHub</a
+          >
+          <a
+            href="https://github.com/waseemmaya/deploy-bar-updates"
+            target="_blank"
+            >Releases</a
+          >
+          <a
+            href="https://github.com/waseemmaya/deploy-bar/issues"
+            target="_blank"
+            >Report Issue</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <style>
+      @keyframes spin {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+
+    <script>
+      // Tab switching function for menu bar preview
+      function switchTab(tab) {
+        // Update tab buttons
+        document
+          .getElementById("tab-vercel")
+          .classList.toggle("active", tab === "vercel");
+        document
+          .getElementById("tab-github")
+          .classList.toggle("active", tab === "github");
+
+        // Update account displays
+        document.getElementById("account-vercel").style.display =
+          tab === "vercel" ? "flex" : "none";
+        document.getElementById("account-github").style.display =
+          tab === "github" ? "flex" : "none";
+
+        // Update list displays
+        document.getElementById("list-vercel").style.display =
+          tab === "vercel" ? "block" : "none";
+        document.getElementById("list-github").style.display =
+          tab === "github" ? "block" : "none";
+      }
+
+      // Mobile menu functions
+      function openMobileMenu() {
+        const overlay = document.getElementById("mobile-menu-overlay");
+        const menu = document.getElementById("mobile-menu");
+        overlay.classList.add("active");
+        menu.classList.add("active");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeMobileMenu() {
+        const overlay = document.getElementById("mobile-menu-overlay");
+        const menu = document.getElementById("mobile-menu");
+        overlay.classList.remove("active");
+        menu.classList.remove("active");
+        document.body.style.overflow = "";
+      }
+
+      // Initialize mobile menu event listeners
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuBtn = document.getElementById("mobile-menu-btn");
+        const closeBtn = document.getElementById("mobile-menu-close");
+        const overlay = document.getElementById("mobile-menu-overlay");
+
+        if (menuBtn) {
+          menuBtn.addEventListener("click", openMobileMenu);
+        }
+
+        if (closeBtn) {
+          closeBtn.addEventListener("click", closeMobileMenu);
+        }
+
+        if (overlay) {
+          overlay.addEventListener("click", closeMobileMenu);
+        }
+
+        // Close menu on escape key
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape") {
+            closeMobileMenu();
+          }
+        });
+      });
+
+      // Fetch latest version from GitHub
+      fetch(
+        "https://raw.githubusercontent.com/waseemmaya/deploy-bar-updates/main/latest.json"
+      )
+        .then((response) => response.json())
+        .then((data) => {
+          const versionEl = document.getElementById("app-version");
+          if (versionEl && data.version) {
+            versionEl.textContent = "v" + data.version;
+          }
+        })
+        .catch((err) => console.log("Could not fetch version:", err));
+    </script>
+  </body>
+</html>
