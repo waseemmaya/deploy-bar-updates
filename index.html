@@ -1167,6 +1167,91 @@
         margin-bottom: 1.5rem;
       }
 
+      /* Download grid (multi-platform) */
+      .download-grid {
+        max-width: 980px;
+        margin: 0 auto 1.5rem;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1rem;
+      }
+
+      .download-card {
+        text-align: left;
+        padding: 1.25rem;
+        background: var(--bg-elevated);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+      }
+
+      .download-card-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.75rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .download-card-title {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        font-weight: 700;
+        letter-spacing: -0.01em;
+      }
+
+      .download-card-title span {
+        color: var(--text-primary);
+      }
+
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        padding: 0.25rem 0.55rem;
+        border-radius: 999px;
+        border: 1px solid var(--border);
+        background: var(--bg-secondary);
+        color: var(--text-muted);
+        font-size: 0.78rem;
+        white-space: nowrap;
+      }
+
+      .pill.recommended {
+        color: var(--accent-teal);
+        border-color: rgba(45, 212, 191, 0.35);
+        background: rgba(45, 212, 191, 0.08);
+      }
+
+      .download-card-desc {
+        color: var(--text-secondary);
+        font-size: 0.92rem;
+        line-height: 1.55;
+        margin-bottom: 1rem;
+      }
+
+      .download-actions {
+        display: grid;
+        gap: 0.6rem;
+      }
+
+      .download-actions a {
+        width: 100%;
+        justify-content: center;
+      }
+
+      @media (max-width: 980px) {
+        .download-grid {
+          grid-template-columns: 1fr;
+        }
+        .download-card {
+          text-align: center;
+        }
+        .download-card-header {
+          justify-content: center;
+        }
+      }
+
       .download-note {
         color: var(--text-muted);
         font-size: 0.9rem;
@@ -1723,11 +1808,7 @@
       </p>
 
       <div class="hero-cta-group">
-        <a
-          href="#download"
-          class="btn-primary"
-          aria-label="Download DeployBar for macOS"
-        >
+        <a href="#download" class="btn-primary" aria-label="Download DeployBar">
           <svg
             width="20"
             height="20"
@@ -1743,7 +1824,7 @@
             <polyline points="7 10 12 15 17 10" />
             <line x1="12" y1="15" x2="12" y2="3" />
           </svg>
-          Download for macOS
+          Download
         </a>
         <a
           href="https://github.com/waseemmaya/deploy-bar"
@@ -5857,47 +5938,175 @@
         Stop switching tabs to check deployments and CI status. Get DeployBar
         and stay focused on what matters — your code.
       </p>
-      <div class="download-buttons">
-        <a
-          href="https://raw.githubusercontent.com/waseemmaya/deploy-bar-updates/main/DeployBar_aarch64.dmg"
-          class="btn-primary"
-        >
-          <svg
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-            <polyline points="7 10 12 15 17 10" />
-            <line x1="12" y1="15" x2="12" y2="3" />
-          </svg>
-          Download for Apple Silicon
-        </a>
-        <a
-          href="https://raw.githubusercontent.com/waseemmaya/deploy-bar-updates/main/DeployBar_x64.dmg"
-          class="btn-secondary"
-        >
-          <svg
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-            <polyline points="7 10 12 15 17 10" />
-            <line x1="12" y1="15" x2="12" y2="3" />
-          </svg>
-          Download for Intel Mac
-        </a>
+      <div class="download-grid" role="list" aria-label="Download DeployBar">
+        <!-- macOS -->
+        <div class="download-card" role="listitem">
+          <div class="download-card-header">
+            <div class="download-card-title">
+              <span>macOS</span>
+              <span class="pill recommended">Recommended</span>
+            </div>
+            <span class="pill">DMG</span>
+          </div>
+          <div class="download-card-desc">
+            Choose Apple Silicon (M1/M2/M3) or Intel. Installs like a normal Mac
+            app.
+          </div>
+          <div class="download-actions">
+            <a
+              href="https://raw.githubusercontent.com/waseemmaya/deploy-bar-updates/main/DeployBar_aarch64.dmg"
+              class="btn-primary"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+              </svg>
+              Apple Silicon (DMG)
+            </a>
+            <a
+              href="https://raw.githubusercontent.com/waseemmaya/deploy-bar-updates/main/DeployBar_x64.dmg"
+              class="btn-secondary"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+              </svg>
+              Intel (DMG)
+            </a>
+          </div>
+        </div>
+
+        <!-- Windows -->
+        <div class="download-card" role="listitem">
+          <div class="download-card-header">
+            <div class="download-card-title">
+              <span>Windows</span>
+            </div>
+            <span class="pill">x64</span>
+          </div>
+          <div class="download-card-desc">
+            Use the installer for most users. MSI is handy for managed / IT
+            installs.
+          </div>
+          <div class="download-actions">
+            <a
+              href="https://raw.githubusercontent.com/waseemmaya/deploy-bar-updates/main/DeployBar_x64_setup.exe"
+              class="btn-primary"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+              </svg>
+              Installer (.exe)
+            </a>
+            <a
+              href="https://raw.githubusercontent.com/waseemmaya/deploy-bar-updates/main/DeployBar_x64.msi"
+              class="btn-secondary"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+              </svg>
+              MSI (.msi)
+            </a>
+          </div>
+        </div>
+
+        <!-- Linux -->
+        <div class="download-card" role="listitem">
+          <div class="download-card-header">
+            <div class="download-card-title">
+              <span>Linux</span>
+            </div>
+            <span class="pill">amd64</span>
+          </div>
+          <div class="download-card-desc">
+            AppImage works across most distros. Use .deb if you prefer package
+            installs.
+          </div>
+          <div class="download-actions">
+            <a
+              href="https://raw.githubusercontent.com/waseemmaya/deploy-bar-updates/main/DeployBar_amd64.AppImage"
+              class="btn-primary"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+              </svg>
+              AppImage
+            </a>
+            <a
+              href="https://raw.githubusercontent.com/waseemmaya/deploy-bar-updates/main/DeployBar_amd64.deb"
+              class="btn-secondary"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+              </svg>
+              Debian/Ubuntu (.deb)
+            </a>
+          </div>
+        </div>
       </div>
       <p class="download-note">
         <a
