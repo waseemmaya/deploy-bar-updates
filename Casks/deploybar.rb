@@ -1,10 +1,10 @@
 cask "deploybar" do
-  version "4.1.4"
+  version "4.1.5"
   
-  arch arm: "aarch64", intel: "30f7b11aa9b4492c9ebda3c91de77731049a9f6c10d11ab7e23b89d23f245b19"
+  arch arm: "aarch64", intel: "dc7e8217e06e669b889640a9a6705f208e7d89c1c8d77187f025bb5bc448f0b7"
   
   url "https://raw.githubusercontent.com/waseemmaya/deploy-bar-updates/main/DeployBar_#{arch}.dmg"
-  sha256 arm: "a5b556bdcf0f762e46de90e58c0b6ea0f623a58a3088fa92274b2eb4eda9220f"
+  sha256 arm: "3e5259ab731f154443f45da9847b63c47777f8b7bf8a04eb479fb4e460846dd8"
   name "DeployBar"
   desc "Monitor Vercel deployments and GitHub Actions in your menu bar"
   homepage "https://waseemmaya.github.io/deploy-bar-updates/"
