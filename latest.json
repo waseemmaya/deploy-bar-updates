@@ -1,14 +1,14 @@
 {
-  "version": "4.1.5",
+  "version": "4.1.6",
   "notes": "See the assets to download this version and install.",
-  "pub_date": "2026-09-23T22:51:51Z",
+  "pub_date": "2026-09-24T10:57:45Z",
   "platforms": {
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSUTlkSGZiWDFFaXNqaW0zbkdrbktlRFppbWVRZVFZMS9JL0xYaGJFUEJ6WTJLWFZVak1Yd2kxSXJ3NWZYaUt3WmVjQ0NGc1FXMkpnNmsvZFNjUm1SbVdKY0VZNlhnZVF3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkwMjAzNjQ3CWZpbGU6RGVwbG95IEJhci5hcHAudGFyLmd6ClFseHFMN3lPWWJxZ08yeG1sc2tyZ08rNWlEMCt0MG0yRkVkMHpWbkxKTFBQY01DcUN2YnBOdDNCZXFhQnFyV0Y5TUwzU0syK0VpdXdtRk8zZjhIdURnPT0K",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSUTlkSGZiWDFFaXZGOHFmSG0xT0U3SUVadUc1TDBId1Brdk82Njd5bXVwd2RTdk53Q3c3RUpxWnlqZ1dzVnVadVJnN0ZlQWVueW02ZmZOdnprNmJCZERkNDlRbENIcmdVPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkwMjQ3MTgwCWZpbGU6RGVwbG95IEJhci5hcHAudGFyLmd6CnhEdmlWMThHVmJWWnI2TjZXT3haU0srTWcvMjFZa1BJdnVvbjBXYnNUUUYvTEI3b1g2RTE4bTBTYjFSUGNTNHJXUHBjZE8wTlBnenRHYTZ3T2JKUEFRPT0K",
       "url": "https://raw.githubusercontent.com/waseemmaya/deploy-bar-updates/main/Deploy.Bar_aarch64.app.tar.gz"
     },
     "darwin-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSUTlkSGZiWDFFaXQ4NzB5N2VEbjJEd3laYTVxdXEvTDBWTjJNanBJSkdpS0doVUxoRDFUNFlrZ2tTRVZCYTd1N3FlSG8wSkRIdFpFZVd2cWdlUG1BUXQxN1VqMjdOMkFnPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkwMjAzNjMzCWZpbGU6RGVwbG95IEJhci5hcHAudGFyLmd6CmVYYTdJWkRNUGNmeEJTbzdETWczOUl4SzlzcEljck13RHJUQ2JuOU1VT0N3cnFaUVBtQzB3cm82OUtWOGhPdDlvandhUEZMK0dxaXVqSEZQZlhqVERRPT0K",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSUTlkSGZiWDFFaWh3WHAwem5pOWdhbk9NOThJSm1yWHE1bmVpb0NCMklGMkxvMzkvNVN3ek91bHRUVVRBU3FEQ0NGM3NsMWs1c2N4cXJyS1JuRGxtUHZacUhqSTJtWWd3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkwMjQ3MTc4CWZpbGU6RGVwbG95IEJhci5hcHAudGFyLmd6CnRETWQ1Sm5tMXAyajR4VlNnQTh6ZmE5WkdUUTNZNmtmWEUzSFZnTFFuVzk4ZUFWNDFWZzIrd2FkKzNPMkF3NFl0TU5BUWdZQzVydGt1dk92WUtsZ0FBPT0K",
       "url": "https://raw.githubusercontent.com/waseemmaya/deploy-bar-updates/main/Deploy.Bar_x64.app.tar.gz"
     }
   },
